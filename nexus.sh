@@ -4,6 +4,8 @@ sudo yum update -y
 sudo yum install wget -y
 sudo yum install java-17-amazon-corretto-jmods -y
 sudo mkdir /app && cd /app
+
+#try download latest & remove root=false in nexus after downloading
 sudo wget -O nexus.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz
 sudo tar -xvf nexus.tar.gz
 sudo mv nexus-3* nexus
