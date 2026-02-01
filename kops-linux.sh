@@ -1,4 +1,4 @@
-#Vim .bashrc
+#vim .bashrc
 #export PATH=$PATH:/usr/local/bin/
 #source .bashrc 
 
