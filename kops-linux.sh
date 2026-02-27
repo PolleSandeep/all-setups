@@ -17,5 +17,7 @@ curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s htt
 chmod +x kops
 sudo mv kops /usr/local/bin/kops
 
+aws s3 mb s3://sandeep298.flm
+
 export KOPS_STATE_STORE=s3://sandeep298.flm
-kops create cluster --name sandeep.k8s.local --zones us-east-1a,us-east-1b --master-count 1 --master-size t2.medium --master-volume-size 25 --node-count 2 --node-size t2.micro --node-volume-size 20
+kops create cluster --name sandeep.k8s.local --zones us-east-1a,us-east-1b --control-plane-count 1 --control-plane-size t2.medium --control-plane-volume-size 25 --node-count 2 --node-size t2.micro --node-volume-size 20
